@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import React, { useState, useEffect } from "react";
 import { Text, StyleSheet, View, SafeAreaView, Image } from "react-native";
 
@@ -15,10 +16,10 @@ const AboutTheAppScreen = params => {
         <Image source={ImageSource} />
         <Image style={styles.threeDots} source={require("./assets/3Dots.png")} />
       </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>{text1}</Text>
-        <Text style={styles.text}>{text2}</Text>
-      </View>
+      <Pressable onPress={() => params.navigation.navigate("undefined", {})}><View style={styles.textContainer}>
+        <View style={styles.KlFrboJD}><Text style={styles.text}>{text1}</Text></View>
+        <View style={styles.GmrwrKoq}><Text style={styles.text}>{text2}</Text></View>
+      </View></Pressable>
     </SafeAreaView>;
 };
 
@@ -38,13 +39,21 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   textContainer: {
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
+    flexDirection: "row",
+    flex: "1"
   },
   text: {
     fontSize: 14,
     textAlign: "justify",
     lineHeight: 18,
     marginVertical: 10
+  },
+  KlFrboJD: {
+    flex: 1
+  },
+  GmrwrKoq: {
+    flex: 1
   }
 });
 export default AboutTheAppScreen;
