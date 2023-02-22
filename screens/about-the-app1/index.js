@@ -1,3 +1,4 @@
+import { ImageBackground } from "react-native";
 import React, { useState, useEffect } from "react";
 import { Text, StyleSheet, View, SafeAreaView, Image } from "react-native";
 
@@ -16,10 +17,10 @@ const AboutTheAppScreen = params => {
         <Image style={styles.threeDots} source={require("./assets/3Dots.png")} />
       </View>
       <View style={styles.textContainer}>
-        <Text style={styles.text}>{text1}</Text>
-        <Text style={styles.text}>{text2}</Text>
+        
+        
       </View>
-    </SafeAreaView>;
+    <ImageBackground style={styles.RCQbBwYx} source={require("./Profile Pic.JPG")} resizeMode="cover"></ImageBackground><ImageBackground style={styles.tESzIbdy} source={require("./Robert-so-foraging.jpg")} resizeMode="cover"></ImageBackground><Text style={styles.gSHIczkM}>This is me oyster foraging</Text></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
@@ -49,6 +50,27 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     flex: "1",
     flexWrap: "no-wrap"
+  },
+  RCQbBwYx: {
+    width: 107,
+    height: 62,
+    top: -42,
+    left: 5
+  },
+  tESzIbdy: {
+    width: 108,
+    height: 105,
+    position: "absolute",
+    left: 15,
+    top: 10
+  },
+  gSHIczkM: {
+    width: 358,
+    height: 192,
+    lineHeight: 14,
+    fontSize: 16,
+    borderRadius: 0,
+    fontFamily: "Nunito"
   }
 });
 export default AboutTheAppScreen;
