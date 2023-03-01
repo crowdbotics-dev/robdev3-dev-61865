@@ -1,3 +1,4 @@
+import { CheckBox } from "react-native-elements";
 import React, { useState, useEffect } from "react";
 import { Text, StyleSheet, View, SafeAreaView, Image } from "react-native";
 
@@ -14,7 +15,7 @@ const AboutTheAppScreen = params => {
       <View style={styles.imgScroller}>
         <Image source={ImageSource} />
         <Image style={styles.threeDots} source={require("./assets/3Dots.png")} />
-      </View>
+      <CheckBox style={styles.eiGPdcTL} title="Checkbox Title" checked="true"></CheckBox></View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>{text1}</Text>
         <Text style={styles.text}>{text2}</Text>
@@ -44,7 +45,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: "justify",
     lineHeight: 18,
-    marginVertical: 10
+    marginVertical: 10,
+    letterSpacing: 3
+  },
+  eiGPdcTL: {
+    width: 183,
+    height: 69
   }
 });
 export default AboutTheAppScreen;
