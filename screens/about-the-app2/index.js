@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20
   },
   text: {
-    fontSize: 14,
+    fontSize: 17,
     textAlign: "justify",
     lineHeight: 18,
     marginVertical: 10,
