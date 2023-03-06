@@ -15,7 +15,7 @@ const AboutTheAppScreen = params => {
       <View style={styles.imgScroller}>
         <Image source={ImageSource} />
         <Image style={styles.threeDots} source={require("./assets/3Dots.png")} />
-      <CheckBox style={styles.eiGPdcTL} title="Checkbox Title" checked="true"></CheckBox></View>
+      <CheckBox style={styles.eiGPdcTL} title="Checkbox Title" checked="false"></CheckBox></View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>{text1}</Text>
         <Text style={styles.text}>{text2}</Text>
