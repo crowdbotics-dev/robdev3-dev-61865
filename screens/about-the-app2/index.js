@@ -1,3 +1,4 @@
+import { FlatList } from "react-native";
 import { CheckBox } from "react-native-elements";
 import React, { useState, useEffect } from "react";
 import { Text, StyleSheet, View, SafeAreaView, Image } from "react-native";
@@ -15,7 +16,9 @@ const AboutTheAppScreen = params => {
       <View style={styles.imgScroller}>
         <Image source={ImageSource} />
         <Image style={styles.threeDots} source={require("./assets/3Dots.png")} />
-      <CheckBox style={styles.eiGPdcTL} title="Checkbox Title" checked="false"></CheckBox></View>
+      <CheckBox style={styles.eiGPdcTL} title="Checkbox Title" checked="false"></CheckBox><FlatList style={styles.RTtOpwWf} renderItem={({
+        item
+      }) => <View style={styles.Omrmwcug}></View>} ItemSeparatorComponent={() => <View style={styles.rwgWmIJe} />} data={[1, 2, 3]} keyExtractor={(item, index) => index} horizontal={true} ListHeaderComponent={() => <Text>My list header</Text>} ListFooterComponent={() => <Text>My list footer</Text>}></FlatList></View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>{text1}</Text>
         <Text style={styles.text}>{text2}</Text>
@@ -51,6 +54,20 @@ const styles = StyleSheet.create({
   eiGPdcTL: {
     width: 183,
     height: 69
+  },
+  RTtOpwWf: {
+    position: "absolute",
+    width: 100,
+    height: 150
+  },
+  Omrmwcug: {
+    width: "100%",
+    height: 60,
+    backgroundColor: "#FFFFFF"
+  },
+  rwgWmIJe: {
+    backgroundColor: "#000000",
+    height: 1
   }
 });
 export default AboutTheAppScreen;
