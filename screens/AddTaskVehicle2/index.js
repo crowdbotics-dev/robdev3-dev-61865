@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
-  Image,
-  ScrollView,
-  Pressable
-} from "react-native";
+import { Text, View, StyleSheet, Image, ScrollView, Pressable } from "react-native";
 
 const AddTaskVehicle = () => {
   const [taskerProfile, setTaskerProfile] = useState({});
@@ -24,41 +17,39 @@ const AddTaskVehicle = () => {
     });
     setTask({
       title: "The Task",
-      description:
-        "Fast and has great attention to details, that describes my work! "
+      description: "Fast and has great attention to details, that describes my work! "
     });
-    setVehicles([
-      {
-        type: "Motorcycle",
-        image: require("./assets/motorcycleIcon.png"),
-        size: "Small",
-        description: "For Takeouts and small tasks"
-      },
-      {
-        type: "Car",
-        image: require("./assets/carIcon.png"),
-        size: "Medium",
-        description: "For Takeouts and small tasks"
-      },
-      {
-        type: "Eco Car",
-        image: require("./assets/ecoCarIcon.png"),
-        size: "Medium",
-        description: "For Takeouts and small tasks"
-      }
-    ]);
+    setVehicles([{
+      type: "Motorcycle",
+      image: require("./assets/motorcycleIcon.png"),
+      size: "Small",
+      description: "For Takeouts and small tasks"
+    }, {
+      type: "Car",
+      image: require("./assets/carIcon.png"),
+      size: "Medium",
+      description: "For Takeouts and small tasks"
+    }, {
+      type: "Eco Car",
+      image: require("./assets/ecoCarIcon.png"),
+      size: "Medium",
+      description: "For Takeouts and small tasks"
+    }]);
   }, []);
+
   const handleVehiclePress = vehicle => {
     const newSelectedVehicles = [...selectedVehicles];
+
     if (newSelectedVehicles.includes(vehicle)) {
       newSelectedVehicles.splice(newSelectedVehicles.indexOf(vehicle), 1);
     } else {
       newSelectedVehicles.push(vehicle);
     }
+
     setSelectedVehicles(newSelectedVehicles);
   };
-  return (
-    <View style={styles.container}>
+
+  return <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.taskerProfile}>
           <Image source={taskerProfile.image} style={styles.profileImage} />
@@ -84,21 +75,13 @@ const AddTaskVehicle = () => {
       </View>
       <View style={styles.vehicleList}>
         <ScrollView>
-          {vehicles.map((vehicle, index) => (
-            <VehicleTile
-              vehicle={vehicle}
-              key={index}
-              selected={selectedVehicles.includes(vehicle)}
-              onPress={() => handleVehiclePress(vehicle)}
-            />
-          ))}
+          {vehicles.map((vehicle, index) => <VehicleTile vehicle={vehicle} key={index} selected={selectedVehicles.includes(vehicle)} onPress={() => handleVehiclePress(vehicle)} />)}
         </ScrollView>
       </View>
       <View style={styles.button}>
         <Button buttonText={"Confirm"} />
       </View>
-    </View>
-  );
+    </View>;
 };
 
 const styles = StyleSheet.create({
@@ -123,8 +106,8 @@ const styles = StyleSheet.create({
     marginVertical: 10
   },
   rateText: {
-    fontSize: 30
-    // fontWeight: "bold"
+    fontSize: 30 // fontWeight: "bold"
+
   },
   grey: {
     color: "#8e8e93"
@@ -163,16 +146,11 @@ const styles = StyleSheet.create({
     right: 0
   }
 });
-
 export default AddTaskVehicle;
 
 const VehicleTile = props => {
-  return (
-    <View style={vehicleTileStyles.vehicleTile}>
-      <Image
-        source={props.vehicle.image}
-        style={vehicleTileStyles.vehicleImage}
-      />
+  return <View style={vehicleTileStyles.vehicleTile}>
+      <Image source={props.vehicle.image} style={vehicleTileStyles.vehicleImage} />
       <View style={vehicleTileStyles.vehicleInfo}>
         <Text style={vehicleTileStyles.vehicleType}>{props.vehicle.type}</Text>
         <Text>{props.vehicle.size} size</Text>
@@ -180,13 +158,8 @@ const VehicleTile = props => {
           {props.vehicle.description}
         </Text>
       </View>
-      <Checkbox
-        value={props.selected}
-        setValue={() => props.onPress()}
-        style={vehicleTileStyles.checkbox}
-      />
-    </View>
-  );
+      <Checkbox value={props.selected} setValue={() => props.onPress()} style={vehicleTileStyles.checkbox} />
+    </View>;
 };
 
 const vehicleTileStyles = StyleSheet.create({
@@ -229,14 +202,12 @@ const Button = params => {
   const btnText = {
     color: params.outline ? "#000" : "#fff"
   };
-  return (
-    <View style={buttonStyles.btnContainer}>
+  return <View style={buttonStyles.btnContainer}>
       <Pressable style={[buttonStyles.btn, btnStyle]} onPress={params.onPress}>
         <Text style={[buttonStyles.btnText, btnText]}>{params.buttonText}</Text>
         <View style={styles.childrenContainer}>{params.children}</View>
       </Pressable>
-    </View>
-  );
+    </View>;
 };
 
 const buttonStyles = StyleSheet.create({
@@ -270,21 +241,11 @@ const buttonStyles = StyleSheet.create({
 });
 
 const Checkbox = props => {
-  return (
-    <Pressable
-      onPress={() => {
-        props.setValue(!props.value);
-      }}>
-      <Image
-        source={
-          props.value
-            ? require("./assets/checkboxIconActive.png")
-            : require("./assets/checkboxIcon.png")
-        }
-        style={[checkboxStyles.checkbox, props.style]}
-      />
-    </Pressable>
-  );
+  return <Pressable onPress={() => {
+    props.setValue(!props.value);
+  }}>
+      <Image source={props.value ? require("./assets/checkboxIconActive.png") : require("./assets/checkboxIcon.png")} style={[checkboxStyles.checkbox, props.style]} />
+    </Pressable>;
 };
 
 const checkboxStyles = StyleSheet.create({
