@@ -21,7 +21,7 @@ const AboutTheAppScreen = params => {
       }) => <View style={styles.Omrmwcug}></View>} ItemSeparatorComponent={() => <View style={styles.rwgWmIJe} />} data={[1, 2, 3]} keyExtractor={(item, index) => index} horizontal={true} ListHeaderComponent={() => <Text>My list header</Text>} ListFooterComponent={() => <Text>My list footer</Text>}></FlatList></View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>{text1}</Text>
-        <Text style={styles.text}>{text2}</Text>
+        <Text style={styles.text}></Text>
       </View>
     </SafeAreaView>;
 };
