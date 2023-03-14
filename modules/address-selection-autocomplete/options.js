@@ -1,27 +1,28 @@
-import { StyleSheet, Dimensions } from "react-native"
+import { StyleSheet, Dimensions } from "react-native";
+const {
+  width,
+  height
+} = Dimensions.get("window");
+const ASPECT_RATIO = width / height; // Guideline sizes are based on standard ~5" screen mobile device
 
-const { width, height } = Dimensions.get("window");
-const ASPECT_RATIO = width / height;
-// Guideline sizes are based on standard ~5" screen mobile device
 const guidelineBaseWidth = 350;
 const guidelineBaseHeight = 680;
 
-const scale = size => (width / guidelineBaseWidth) * size;
-const scaleVertical = size => (height / guidelineBaseHeight) * size;
+const scale = size => width / guidelineBaseWidth * size;
+
+const scaleVertical = size => height / guidelineBaseHeight * size;
 
 export const styles = StyleSheet.create({
   view: {
     height: "100%"
   },
-  container: {
-    ...StyleSheet.absoluteFillObject,
+  container: { ...StyleSheet.absoluteFillObject,
     height: 400,
     width: 400,
     justifyContent: "flex-end",
     alignItems: "center"
   },
-  map: {
-    ...StyleSheet.absoluteFillObject
+  map: { ...StyleSheet.absoluteFillObject
   },
   searchbar: {
     backgroundColor: "white",
@@ -44,7 +45,11 @@ export const styles = StyleSheet.create({
     borderRadius: 30,
     elevation: 5
   },
-  marker: { height: 40, width: 40, resizeMode: "contain" },
+  marker: {
+    height: 40,
+    width: 40,
+    resizeMode: "contain"
+  },
   markerFixed: {
     left: "50%",
     marginLeft: -24,
@@ -58,7 +63,6 @@ export const styles = StyleSheet.create({
     },
     shadowOpacity: 0.57,
     shadowRadius: 15.19,
-
     elevation: 23
   },
   done: {
@@ -78,7 +82,6 @@ export const styles = StyleSheet.create({
     elevation: 23
   }
 });
-
 export const autoCompleteStyles = StyleSheet.create({
   mainContainer: {
     flexDirection: 'row',
@@ -87,9 +90,12 @@ export const autoCompleteStyles = StyleSheet.create({
     height: '100%',
     width: "90%"
   },
-  autoCompleteCOntainer: { zIndex: 1000, width: "90%", alignSelf: "center" },
-  textInputContainer: {
+  autoCompleteCOntainer: {
+    zIndex: 1000,
+    width: "90%",
+    alignSelf: "center"
   },
+  textInputContainer: {},
   textInput: {
     color: "#5d5d5d",
     fontSize: 14,
@@ -100,8 +106,7 @@ export const autoCompleteStyles = StyleSheet.create({
     color: "#1faadb"
   }
 });
-
-const GOOGLE_API_KEY = "Your Google API key"
+const GOOGLE_API_KEY = "Your Google API key";
 const addressAutocompleteOptions = {
   placeholder: "Enter address",
   initialRegion: {
@@ -132,11 +137,9 @@ const addressAutocompleteOptions = {
   currentLocationLabel: "",
   renderLeftButton: () => {},
   renderRightButton: () => {},
-  markerUrl:
-    "https://cdn2.iconfinder.com/data/icons/IconsLandVistaMapMarkersIconsDemo/256/MapMarker_Marker_Outside_Chartreuse.png",
+  markerUrl: "https://cdn2.iconfinder.com/data/icons/IconsLandVistaMapMarkersIconsDemo/256/MapMarker_Marker_Outside_Chartreuse.png",
   markerStyles: null
 };
-
 export default {
   apiKey: GOOGLE_API_KEY,
   autoCompleteStyles: autoCompleteStyles,
