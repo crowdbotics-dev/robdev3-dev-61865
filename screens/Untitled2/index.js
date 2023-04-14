@@ -9,7 +9,7 @@ const Untitled2 = () => {
       padding: 10,
       position: 'relative',
       flex: 1
-    }}><ImageBackground style={styles.uzwkVMmz} source={require("./With getReduxActions.jpg")} resizeMode="cover"></ImageBackground></ScrollView>
+    }} style={styles.NGFqHbAC}><ImageBackground style={styles.uzwkVMmz} source={require("./With getReduxActions.jpg")} resizeMode="cover"></ImageBackground></ScrollView>
     </SafeAreaView>;
 };
 
@@ -20,6 +20,9 @@ const styles = StyleSheet.create({
   uzwkVMmz: {
     width: 107,
     height: 62
+  },
+  NGFqHbAC: {
+    borderRadius: 50
   }
 });
 export default Untitled2;
