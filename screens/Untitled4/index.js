@@ -21,7 +21,9 @@ const styles = StyleSheet.create({
   },
   qqJezCab: {
     width: 338,
-    height: 336
+    height: 336,
+    position: "absolute",
+    top: 118
   }
 });
 export default Untitled4;
