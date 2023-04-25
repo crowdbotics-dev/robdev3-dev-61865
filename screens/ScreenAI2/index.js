@@ -1,4 +1,3 @@
-import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
 const ProfileScreen = () => {
@@ -12,7 +11,7 @@ const ProfileScreen = () => {
       </View>
       <View style={styles.body}>
         <View style={styles.bodyContent}>
-          <Text style={styles.info}>Email: jsucks@gmail.com</Text>
+          <Text style={styles.info}>{"Email: jerick@gmail.com"}</Text>
           <Text style={styles.info}>Phone: +1 123 456 7890</Text>
           <Text style={styles.info}>Address: 123 Main St, Anytown USA</Text>
         </View>
