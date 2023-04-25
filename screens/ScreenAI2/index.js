@@ -6,14 +6,14 @@ const ProfileScreen = () => {
         <Image style={styles.avatar} source={{
         uri: "https://cdn.britannica.com/47/201647-050-C547C128/Hugh-Jackman-2013.jpg"
       }} />
-        <Text style={styles.name}>Jerick</Text>
+        <Text style={styles.name}>{"Robert So"}</Text>
         <Text style={styles.job}>Programmer</Text>
       </View>
       <View style={styles.body}>
         <View style={styles.bodyContent}>
-          <Text style={styles.info}>{"Email: jerick@gmail.com"}</Text>
+          <Text style={styles.info}>{"Email: rob-codes@gmail.com"}</Text>
           <Text style={styles.info}>Phone: +1 123 456 7890</Text>
-          <Text style={styles.info}>Address: 123 Main St, Anytown USA</Text>
+          <Text style={styles.info}>{"Address: doesn't matter works remotely"}</Text>
         </View>
       </View>
     </View>;
