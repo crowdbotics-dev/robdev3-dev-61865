@@ -1,4 +1,3 @@
-import { View } from "react-native";
 import { StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
 const Untitled2 = () => {
@@ -8,7 +7,7 @@ const Untitled2 = () => {
       padding: 10,
       position: 'relative',
       flex: 1
-    }} style={styles.NGFqHbAC}><View style={styles.SiWDnwLO}></View></ScrollView>
+    }} style={styles.NGFqHbAC}></ScrollView>
     </SafeAreaView>;
 };
 
@@ -18,13 +17,6 @@ const styles = StyleSheet.create({
   },
   NGFqHbAC: {
     borderRadius: 50
-  },
-  SiWDnwLO: {
-    height: 60,
-    width: 140,
-    backgroundColor: "#E4E4E4",
-    borderRadius: 0,
-    color: "#777777"
   }
 });
 export default Untitled2;
