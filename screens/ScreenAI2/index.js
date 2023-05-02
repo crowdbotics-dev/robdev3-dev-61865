@@ -11,7 +11,7 @@ const ProfileScreen = () => {
       </View>
       <View style={styles.body}>
         <View style={styles.bodyContent}>
-          <Text style={styles.info}>{"Email: rob-codes@gmail.com"}</Text>
+          <Text style={styles.info}>{"Email: rob-codes@gmail"}</Text>
           <Text style={styles.info}>Phone: +1 123 456 7890</Text>
           <Text style={styles.info}>{"Address: doesn't matter works remotely"}</Text>
         </View>
