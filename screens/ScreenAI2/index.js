@@ -16,7 +16,7 @@ const ProfileScreen = () => {
           
         </View>
       </View>
-    <Text style={styles.ZXJDVyPK}>Lorem ipsum…</Text></View>;
+    </View>;
 };
 
 const styles = StyleSheet.create({
@@ -64,13 +64,6 @@ const styles = StyleSheet.create({
     color: "#696969",
     marginTop: 10,
     position: "relative"
-  },
-  ZXJDVyPK: {
-    width: 100,
-    height: 50,
-    lineHeight: 14,
-    fontSize: 14,
-    borderRadius: 0
   }
 });
 export default ProfileScreen;
