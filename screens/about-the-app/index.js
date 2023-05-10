@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Text, StyleSheet, View, SafeAreaView, Image } from "react-native";
 
-const AboutTheAppScreen = params => {
+const AboutTheAppScreen = () => {
   const [ImageSource, setImageSource] = useState();
   const [text1, setText1] = useState("");
   const [text2, setText2] = useState("");
@@ -17,7 +17,7 @@ const AboutTheAppScreen = params => {
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>{text1}</Text>
-        <Text style={styles.text}>{text2}</Text>
+        <Text style={styles.text}>{"soemthing"}</Text>
       </View>
     </SafeAreaView>;
 };
