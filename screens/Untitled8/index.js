@@ -11,7 +11,8 @@ const Untitled8 = () => {
       flex: 1
     }}>
         <View style={styles.jlLSRYqX}></View>
-      <Text style={styles.eVMGPzTY}>Lorem ipsum…</Text></ScrollView>
+        <Text style={styles.eVMGPzTY}>Lorem ipsum…</Text>
+      <Text style={styles.OxrUfOxp}>Lorem ipsum…</Text></ScrollView>
     </SafeAreaView>;
 };
 
@@ -27,6 +28,13 @@ const styles = StyleSheet.create({
     color: "#777777"
   },
   eVMGPzTY: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  OxrUfOxp: {
     width: 100,
     height: 50,
     lineHeight: 14,
