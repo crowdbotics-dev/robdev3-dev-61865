@@ -12,7 +12,8 @@ const Untitled8 = () => {
     }}>
         <View style={styles.jlLSRYqX}></View>
         <Text style={styles.eVMGPzTY}>Lorem ipsum…</Text>
-      <Text style={styles.OxrUfOxp}>Lorem ipsum…</Text></ScrollView>
+        <Text style={styles.OxrUfOxp}>Lorem ipsum…</Text>
+      </ScrollView>
     </SafeAreaView>;
 };
 
