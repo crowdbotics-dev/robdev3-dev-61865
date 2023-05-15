@@ -13,7 +13,6 @@ const ProfileScreen = () => {
         <View style={styles.bodyContent}>
           <Text style={styles.info}>{"Email: rob-codes-allday@gmail"}</Text>
           <Text style={styles.info}>{"Phone: +1 123 456 70"}</Text>
-          
         </View>
       </View>
     </View>;
