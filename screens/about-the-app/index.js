@@ -17,7 +17,7 @@ const AboutTheAppScreen = () => {
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>{text1}</Text>
-        <Text style={styles.text}>{"soemthing"}</Text>
+        <Text style={styles.text}>{"Ellie"}</Text>
       </View>
     </SafeAreaView>;
 };
